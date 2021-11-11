@@ -19,6 +19,10 @@ public class VarLogController {
 	
 		
 	@GetMapping("/api/varlog")
+	/**
+	 *  TODO support JSON as param (will help with filter)
+	 *  TODO explore graphQL
+	 */
 	public List<VarLogDTO> get(
 			@RequestParam(value = "filename", defaultValue = "messages") String filename, 
 			@RequestParam(value = "numEvents", defaultValue = "10") Integer numEvents, 

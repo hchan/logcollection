@@ -18,7 +18,6 @@ public class VarLogService {
 	public static File parentDir = new File("/var/log");
 
 	public List<VarLogDTO> getLogs(String filename, Integer numEvents, String filter) throws FileNotFoundException, UnknownException {
-
 		File file = new File(parentDir, filename);
 		if (!file.exists()) {
 			throw new FileNotFoundException(filename);
@@ -26,8 +25,7 @@ public class VarLogService {
 		ReversedLinesFileReader reader = null;
 		List<VarLogDTO> retval = new ArrayList<>();
 		try {
-			reader = new ReversedLinesFileReader(file, Charset.forName("utf-8"));
-			 
+			reader = new ReversedLinesFileReader(file, Charset.forName("utf-8"));			 
 			for (int i = 0; i < numEvents; ) {
 				String line = reader.readLine();
 				if (line == null) break;
@@ -37,12 +35,6 @@ public class VarLogService {
 				}
 			}
 		} 
-		catch (IOException ioe ) {
-			
-		}
-		catch (NullPointerException npe) {
-			
-		}
 		catch (Exception e) {
 			throw new UnknownException(e);
 		}

@@ -6,6 +6,6 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class VarLogDTO {
-	private String line;
+	private String line; // ... could decompose further, i.e. labels, timestamps
 
 }

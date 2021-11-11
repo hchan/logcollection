@@ -11,6 +11,13 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
+import com.henrychan.logcollection.exception.UnknownException;
+
+/**
+ * 
+ * @author Henry
+ * handles exceptions ... TODO handle {@link UnknownException}
+ */
 @ControllerAdvice
 public class DefaultControllerAdvice {
 
