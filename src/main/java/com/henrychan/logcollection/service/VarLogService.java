@@ -31,7 +31,7 @@ public class VarLogService {
 			for (int i = 0; i < numEvents; ) {
 				String line = reader.readLine();
 				if (line == null) break;
-				if (filter != null && line.contains(filter)) {
+				if (filter == null || line.contains(filter)) {
 					retval.add(new VarLogDTO(line));				
 					i++;
 				}
