@@ -7,11 +7,12 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.io.input.ReversedLinesFileReader;
+//import org.apache.commons.io.input.ReversedLinesFileReader;
 import org.springframework.stereotype.Service;
 
 import com.henrychan.logcollection.dto.VarLogDTO;
 import com.henrychan.logcollection.exception.UnknownException;
+import com.henrychan.logcollection.util.ReversedLinesFileReader;
 
 @Service
 public class VarLogService {

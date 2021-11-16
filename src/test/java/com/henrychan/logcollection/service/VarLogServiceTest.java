@@ -1,15 +1,15 @@
-package com.henrychan.logcollection.logcollection;
+package com.henrychan.logcollection.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.FileNotFoundException;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import com.henrychan.logcollection.dto.VarLogDTO;
 import com.henrychan.logcollection.exception.UnknownException;
-import com.henrychan.logcollection.service.VarLogService;
 
 /**
  *
@@ -19,10 +19,11 @@ import com.henrychan.logcollection.service.VarLogService;
  * i.e.
  * for ($i = 0; $i <= 100; $i++) {
  *   print($i . "\n");
- * }
+ * } 
+ * or convert that logic to BeforeAll ;)
  *
  */
-public class LogcollectionApplicationTests {
+public class VarLogServiceTest {
 	static VarLogService varLogService = null;
 	static List<VarLogDTO> result = null;
 	
